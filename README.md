@@ -14,3 +14,9 @@ gem 'bootstrap', git: 'https://github.com/IngateFuture/bootstrap.git'
 .button
   +button
 ```
+
+## Миксины тут
+
+```
+bootstrap/lib/stylesheets/mixins/
+```
