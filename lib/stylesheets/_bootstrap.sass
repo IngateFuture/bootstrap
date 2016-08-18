@@ -1,3 +1,25 @@
 // This is your framework's main stylesheet. Use it to import all default modules.
 @import variables
 @import ./mixins/button
+
+//==========================================================
+// buttons
+//==========================================================
+
+.button
+  +button
+
+.big-button
+  +big_button
+
+.form-button
+  +form_button
+
+//==========================================================
+// inputs
+//==========================================================
+
+input[type=submit]
+  +form_button
+  width: auto
+
