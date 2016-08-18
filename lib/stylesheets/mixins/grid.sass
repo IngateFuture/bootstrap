@@ -1,0 +1,38 @@
+@import compass/css3
+
+$grid_size: 12
+$grid_item_space: 30px
+
+*
+  +box-sizing(border-box)
+
+  &:before,
+  &:after
+    +box-sizing(border-box)
+
+.row
+  margin-right: -$grid_item_space/2
+  margin-left: -$grid_item_space/2
+
+  &:before,
+  &:after
+    display: block
+    content: ''
+
+  &:after
+    clear: both
+
+  .col
+    float: left
+    position: relative
+    min-height: 1px
+    padding-right: $grid_item_space/2
+    padding-left: $grid_item_space/2
+
+  @for $i from 1 through $grid_size
+    .col-#{$i}
+      @extend .col
+
+@for $i from 1 through $grid_size
+  .col-#{$i}
+    width: floor(10000 * 100% * $i / 12) / 10000
