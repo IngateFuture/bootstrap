@@ -35,5 +35,9 @@ SimpleForm.setup do |config|
     hint_class: :field_with_hint, error_class: :field_with_errors do |b|
     ...
   end
+  
+  ...
+  config.default_form_class = 'b-form'
+  ...
 end
 ```
