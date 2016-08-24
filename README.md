@@ -24,3 +24,16 @@ gem 'sass-rails'
 ```
 bootstrap/lib/stylesheets/mixins/
 ```
+
+## SimpleForm configuration
+
+_config/initializers/simple_form.rb_:
+
+```ruby
+SimpleForm.setup do |config|
+  config.wrappers :default, class: 'b-input',
+    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
+    ...
+  end
+end
+```
