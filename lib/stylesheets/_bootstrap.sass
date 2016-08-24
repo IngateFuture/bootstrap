@@ -43,3 +43,35 @@ h2
 h3
   font-size: $font_size_h3
   margin: 14px 0 7px
+
+//==========================================================
+// forms
+//==========================================================
+
+$label_width: 210px
+
+.b-form
+  .b-input
+    margin-top: 10px
+
+    &.field-with-errors
+      input
+        border-color: $input_error_border_color
+
+    label
+      width: $label_width
+
+    .error
+      color: $input_error_color
+      display: block
+      font-size: 16px
+      margin-left: $label_width
+
+    span.hint
+      display: block
+      font-size: 16px
+      margin-top: 12px
+
+// can be outside form
+.actions
+  margin-top: 80px
