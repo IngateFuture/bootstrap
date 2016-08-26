@@ -1,0 +1,69 @@
+@import compass/css3
+@import mixins/link
+//@import mixins/retina
+
+$image_path: 'v2/globals'
+
+header
+  font-size: 16px
+  width: 100%
+
+  a
+    +black_link
+    white-space: nowrap
+
+  .logo
+    //+background_inline_retina('#{$image_path}/logo_unregistered', 'png', $h: 53px, $w: 187px, $position: center center)
+    border: none
+    display: inline-block
+    height: 53px
+    width: 187px
+
+  ul
+    display: inline-block
+    padding: 10px 20px
+    margin: 0
+    width: 100%
+
+    &.registered
+      background-color: #c8e8c9
+      height: 65px
+
+      .logo
+        //+background_inline_retina('#{$image_path}/logo_registered', 'png', $h: 40px, $w: 143px, $position: center center)
+        height: 40px
+        width: 143px
+
+    &.unregistered
+      height: 80px
+
+    li
+      display: inline-block
+      margin-left: 3%
+
+      &:first-child
+        margin: 0
+
+  .profile
+    margin-right: 10px
+
+  .logout
+    //+background_inline_retina('#{$image_path}/menu_exit', 'png', $h: 23px, $w: 23px, $position: right center)
+    border: none
+    display: inline-block
+    height: 23px
+    padding-right: 35px
+
+  .login
+    //+background_inline_retina('#{$image_path}/menu_login', 'png', $h: 17px, $w: 33px, $position: right center)
+    border: none
+    display: inline-block
+    height: 17px
+    padding-right: 40px
+
+  .active
+    +border-radius(5px)
+    background-color: rgba(0, 0, 0, 0.1)
+    border: none
+    margin: 0 -10px
+    padding: 5px 10px

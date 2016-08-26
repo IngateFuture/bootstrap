@@ -2,10 +2,30 @@
 @import variables
 @import ./mixins/buttons
 @import ./mixins/inputs
+@import ./mixins/link
+
+html, body
+  height: 100%
 
 body
+  color: $text_color
   font-family: 'Roboto', 'PT Sans', sans-serif
-  font-size: $font-size
+  font-size: $font_size
+  margin: 0 auto
+  text-rendering: optimizeLegibility
+  min-width: 1000px
+  width: 100%
+
+  .container
+    padding: 0 30px
+    margin: 0 auto
+    max-width: 1500px
+
+a
+  +link
+
+@import ./reenter/grid
+@import ./reenter/header
 
 //==========================================================
 // buttons

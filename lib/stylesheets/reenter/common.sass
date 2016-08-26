@@ -1,0 +1,111 @@
+@import reenter/variables
+
+@import _bootstrap
+
+.sub-container-full-width
+  margin-left: -30px
+  margin-right: -30px
+
+iframe[name='google_conversion_frame']
+  display: none
+
+
+small,
+.small
+  font-size: 16px
+
+img
+  border: none
+  outline: none
+  border-style: none
+
+label
+  display: inline-block
+
+section
+  margin-top: 80px
+
+// TODO: remove?
+.currency,
+.percent
+  position: relative
+
+  &:after
+    position: absolute
+    right: 0
+    top: 2px
+
+.currency
+  &:after
+    content: attr(data-currency) !important
+
+  input[type=text]
+    padding-right: 40px
+
+.percent
+  &:after
+    content: attr(data-percent) !important
+
+  input[type=text]
+    padding-right: 16px
+
+.alert-text
+  background-color: #ff5200
+  +border-radius(5px)
+  display: inline-block
+  padding: 0 5px
+  vertical-align: top
+
+.error
+  color: red
+
+  &.icon
+    padding-left: 20px
+    +background_inline_retina('#{$image_global_path}/error', 'png', $h: 16px, $w: 16px, $position: left center)
+
+.hidden
+  display: none !important
+
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+table
+  border-collapse: collapse
+
+.vertical-middle
+  height: 100%
+
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+  *
+    vertical-align: middle
+
+.pull-right
+  float: right
+
+.disabled
+  background-color: $disabled_bg_color
+  color: $disabled_color
+  cursor: not-allowed
+
+.error-explanation
+  color: $error_color
+  margin-bottom: 18px
+
+
+//==========================================================
+// selects
+//==========================================================
+
+select
+  +select
+  width: 370px
+
+
