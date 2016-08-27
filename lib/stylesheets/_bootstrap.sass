@@ -4,6 +4,9 @@
 @import ./mixins/inputs
 @import ./mixins/link
 
+@import ./reenter/grid
+@import ./reenter/header
+
 html, body
   height: 100%
 
@@ -21,11 +24,20 @@ body
     margin: 0 auto
     max-width: 1500px
 
-a
-  +link
+.vertical-middle
+  height: 100%
 
-@import ./reenter/grid
-@import ./reenter/header
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+  *
+    vertical-align: middle
+
+.pull-right
+  float: right
 
 //==========================================================
 // buttons
@@ -53,6 +65,13 @@ input[type=submit]
   width: auto
 
 //==========================================================
+// links
+//==========================================================
+
+a
+  +link
+
+//==========================================================
 // titles
 //==========================================================
 
@@ -71,8 +90,6 @@ h3
 //==========================================================
 // forms
 //==========================================================
-
-$label_width: 210px
 
 .b-form
   .b-input
@@ -97,6 +114,5 @@ $label_width: 210px
       font-size: 16px
       margin-top: 12px
 
-// can be outside form
 .actions
   margin-top: 80px

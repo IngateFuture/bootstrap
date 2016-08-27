@@ -1,0 +1,15 @@
+=background_inline_retina($path, $ext, $w: auto, $h: auto, $repeat: no-repeat, $position: 0 0)
+  background: inline-image($path + "." + $ext) $repeat $position
+
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5)
+    background: inline-image($path + "@2x" + "." + $ext) $repeat
+    background-size: $w $h
+    background-position: $position
+
+=background_retina($path, $ext, $w: auto, $h: auto, $repeat: no-repeat, $position: 0 0)
+  background: image-url($path + "." + $ext) $repeat $position
+
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5)
+    background: image-url($path + "@2x" + "." + $ext) $repeat
+    background-size: $w $h
+    background-position: $position
