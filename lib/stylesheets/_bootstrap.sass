@@ -1,8 +1,10 @@
 // This is your framework's main stylesheet. Use it to import all default modules.
 @import variables
+
 @import ./mixins/buttons
 @import ./mixins/inputs
 @import ./mixins/link
+@import ./mixins/retina
 
 @import ./reenter/grid
 @import ./reenter/header
@@ -62,6 +64,7 @@ input
 
 input[type=submit]
   +form_button
+  -webkit-appearance: none
   width: auto
 
 //==========================================================
