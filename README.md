@@ -15,9 +15,9 @@ gem 'sass-rails'
 _config/initializers/simple_form.rb_:
 
 ```ruby
-  SimpleForm.setup do |config|
-    config.wrappers :default, class: 'b-input',
-      hint_class: :field_with_hint, error_class: :field_with_errors do |b|
+SimpleForm.setup do |config|
+  config.wrappers :default, class: 'b-input',
+    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
     # ...
   end
 
