@@ -1,0 +1,20 @@
+$select_width: 316px
+
+=select
+  +border-radius(3px)
+  +appearance(none)
+  //background: inline-image('globals/arrow_drop_down.png') right top no-repeat
+  background-color: $input_background_color
+  border: 1px solid $input_border_color
+  box-shadow: none
+  display: block
+  font-size: 16px
+  line-height: 1.25
+  min-width: $select_width
+  overflow: hidden
+  padding: 8px
+
+  &:focus
+    outline-color: $input_border_color_focus
+    outline-offset: -3px
+    outline-width: 3px
