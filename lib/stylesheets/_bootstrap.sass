@@ -1,11 +1,15 @@
 // This is your framework's main stylesheet. Use it to import all default modules.
+@import compass/css3
+
 @import variables
 
 @import ./mixins/buttons
 @import ./mixins/inputs
 @import ./mixins/link
 @import ./mixins/retina
+@import ./mixins/select
 
+@import ./reenter/common
 @import ./reenter/grid
 @import ./reenter/header
 
@@ -66,6 +70,14 @@ input[type=submit]
   +form_button
   -webkit-appearance: none
   width: auto
+
+//==========================================================
+// selects
+//==========================================================
+
+select
+  +select
+  width: 370px
 
 //==========================================================
 // links
