@@ -58,6 +58,11 @@ body
 .form-button
   +form_button
 
+input[type=submit]
+  +form_button
+  -webkit-appearance: none
+  width: auto
+
 //==========================================================
 // inputs
 //==========================================================
@@ -65,11 +70,6 @@ body
 input
   +input
   width: 370px
-
-input[type=submit]
-  +form_button
-  -webkit-appearance: none
-  width: auto
 
 //==========================================================
 // selects
